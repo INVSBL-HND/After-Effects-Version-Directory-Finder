@@ -21,13 +21,13 @@ function checkVersion() {
 var appVersionYear=checkVersion();
 
 function findPreset(presetFileName) {
-  if (  $.os.indexOf("Windows") != -1 ) {
+	if (  $.os.indexOf("Windows") != -1 ) {
 		var presetPath = "..Programs\Adobe\Adobe After Effects " + appVersionYear + "\Support Files\Presets\\" + presetName;
-    var presetFile = File(presetPath);
 	} else {
 		var presetPath = "../Applications/Adobe After Effects " + appVersionYear + "/Presets/" + presetName;
-    var presetFile = File(presetPath);
-	}
+	};
+	var presetFile = File(presetPath);
+	return presetFile;
 };
 
 var myPresetFile = findPreset("myPreset.ffx");
